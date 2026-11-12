@@ -25,7 +25,7 @@ $$\hat{b}_t = \beta_0 + \sum_{k=1}^{K} \left[ \alpha_k \sin\left(\frac{2\pi k t}
 
 Detrended residuals $r_t = x_t - \hat{b}_t$ are standardized via a causal sliding-window ($W = 48$) **Median Absolute Deviation** estimator achieving the optimal **50% breakdown point**:
 
-$$Z_{\text{MAD}, t} = \frac{r_t - \tilde{r}_t}{1.4826 \cdot \operatorname{median}_{j \in \mathcal{W}_t}\left(|r_j - \tilde{r}_t|\right) + \epsilon}$$
+$$Z_{\text{MAD}, t} = \frac{r_t - \tilde{r}_t}{1.4826 \cdot \text{median}_{j \in \mathcal{W}_t}\left(|r_j - \tilde{r}_t|\right) + \epsilon}$$
 
 ---
 
