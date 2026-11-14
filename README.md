@@ -9,7 +9,7 @@
 [![Affiliation](https://img.shields.io/badge/COMSATS%20Lahore-Mathematics%20%26%20Data%20Science-6366f1?style=for-the-badge)](#)
 [![Paper](https://img.shields.io/badge/Technical%20Report-PDF-f43f5e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](Harmonic_MAD_Energy_Study.pdf)
 
-**A semi-parametric mathematical framework combining truncated Fourier harmonic regression with a causal rolling Median Absolute Deviation (MAD) estimator to eliminate variance-induced masking in building energy telemetry.**
+**A semi-parametric mathematical framework combining truncated Fourier harmonic regression with a causal rolling Median Absolute Deviation (MAD) estimator to eliminate variance-induced masking across controlled and empirical BDG2 commercial building telemetry.**
 
 </div>
 
@@ -33,7 +33,7 @@ $$Z_{\text{MAD}, t} = \frac{r_t - \tilde{r}_t}{1.4826 \cdot \text{median}_{j \in
 
 ```mermaid
 flowchart LR
-    A[("Half-Hourly Telemetry<br/>(N = 1,440, Δt = 0.5h)")] --> B["Stage 1: Fourier Harmonic<br/>Regression (K = 2)"]
+    A[("Half-Hourly Telemetry<br/>(Controlled & BDG2, N = 1,440)")] --> B["Stage 1: Fourier Harmonic<br/>Regression (K = 2)"]
     B --> C["Detrended Residuals<br/>r_t = x_t - b_hat_t"]
     C --> D["Stage 2: Causal Rolling MAD<br/>(W = 48, 50% Breakdown)"]
     D --> E{"|Z_MAD| > 2.8?"}
